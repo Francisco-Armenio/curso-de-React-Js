@@ -7,3 +7,56 @@
 .titulo{
   margin: 40px;
 }
+
+.producto{
+  margin: 35px;
+}
+
+.imagenes{
+  display: flex;
+  border: 3px solid #116f8b;
+}
+
+.contenedorItem{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5px 10px;
+  width: fit-content;
+  margin: 0 auto;
+  
+}
+
+.producto{
+  text-decoration: none;
+  background-color: rgb(151, 185, 154);
+  color: black;
+  box-shadow: 0 10px 20px black;
+}
+
+.nombre{
+  padding: 8px;
+}
+
+.item{
+  display: flex;
+  padding: 10px;
+  border: 40px solid beige;
+}
+
+.name{
+  display: flex;
+  margin-left: 100px;
+}
+
+.plata{
+  display: flex;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+.descripcion{
+  display: flex;
+  margin-top: 100px;
+}
+
+

@@ -1,25 +1,26 @@
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import React from "react";
+
 
 const NavBar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand">Libreria TiempoLibro</a>
+          <Link to="/" className="navbar-brand">Libreria TiempoLibro</Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" >Libros de accion</a>
+                <Link to="/categoria/ficcion" className="nav-link active" aria-current="page" >Ciencia ficción</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" >Libros de romance</a>
+                <Link to="/categoria/romance" className="nav-link active" aria-current="page" >Romance</Link>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link active" aria-current="page" >Libros de fantasia</a>
+                <Link to="/categoria/fantasia" className="nav-link active" aria-current="page" >Fantasia</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" >Libros de suspenso</a>
+                <Link to="/categoria/suspenso" className="nav-link active" aria-current="page" >Suspenso</Link>
               </li>
             </ul>
             <form className="d-flex" role="search">
