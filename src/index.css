@@ -59,4 +59,24 @@
   margin-top: 100px;
 }
 
+.carrito{
+  display: flex;
+  flex-direction: column;
+}
+
+.product{
+  display: flex;
+  justify-content: space-around;
+}
+
+.sinProductos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.contenido{
+  text-align: center;
+}
 
