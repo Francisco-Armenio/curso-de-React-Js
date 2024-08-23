@@ -2,7 +2,7 @@ import ItemCount from "./ItemCount"
 import { useContext, useState } from "react"
 import { CartContext } from "../context/CartContext"
 import { Link } from "react-router-dom"
-
+import './itemDetailContainer.css';
 
 const ItemDetail = ( { producto } ) => {
   const {agregarProducto} = useContext(CartContext);
@@ -17,7 +17,7 @@ const ItemDetail = ( { producto } ) => {
   }
 
   return (
-    <div className='item'>
+    <div className="detail">
       <div>
         <img className='img' width={248} src={producto.imagen} alt="" />
       </div> 
@@ -28,7 +28,7 @@ const ItemDetail = ( { producto } ) => {
       {
         mostrarItemCount ? (<ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito}/> 
         ) : (
-        <Link to="/cart">ir al carrito</Link>
+        <Link to="/cart" className="button-detail">ir al carrito</Link>
       )
       }
 
