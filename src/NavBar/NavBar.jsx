@@ -1,36 +1,27 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
-
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <Link to="/" className="navbar-brand">Libreria TiempoLibro</Link>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link to="/categoria/ficcion" className="nav-link active" aria-current="page" >Ciencia ficción</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/categoria/romance" className="nav-link active" aria-current="page" >Romance</Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link to="/categoria/fantasia" className="nav-link active" aria-current="page" >Fantasia</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/categoria/suspenso" className="nav-link active" aria-current="page" >Suspenso</Link>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <CartWidget />
-            </form>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <header className="navbar">
+      <div className="navbar__left">
+        <Link to="/" className="navbar__logo">TiempoLibro</Link>
+      </div>
+
+      <div className="navbar__center">
+        <nav className="navbar__links">
+          <Link to="/categoria/ficcion" className="navbar__link">Ciencia Ficción</Link>
+          <Link to="/categoria/romance" className="navbar__link">Romance</Link>
+          <Link to="/categoria/fantasia" className="navbar__link">Fantasía</Link>
+          <Link to="/categoria/suspenso" className="navbar__link">Suspenso</Link>
+        </nav>
+      </div>
+
+      <div className="navbar__right">
+        <CartWidget />
+      </div>
+    </header>
   );
 };
 

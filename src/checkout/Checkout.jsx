@@ -20,7 +20,7 @@ const Checkout = () => {
     };
 
     const handleSubmitForm = (event) => {
-        event.preventDefault(); // Corregido
+        event.preventDefault();
 
         const orden = {
             comprador: { ...datosForm },
@@ -46,15 +46,16 @@ const Checkout = () => {
     return (
         <div className="checkout">
             {idOrden ? (
-                <div className="order-completed">
-                    <h2>Orden completada</h2>
-                    <p>ID de la orden: {idOrden}</p>
+                <div className="checkout__order-completed">
+                    <h2 className="checkout__title">Orden completada</h2>
+                    <p className="checkout__order-id">ID de la orden: <span>{idOrden}</span></p>
                 </div>
             ) : (
                 <FormularioCheckout 
                     datosForm={datosForm} 
                     handleChangeInput={handleChangeInput} 
-                    handleSubmitForm={handleSubmitForm} // Corregido
+                    handleSubmitForm={handleSubmitForm} 
+                    className="checkout__form"
                 />
             )}
         </div>
